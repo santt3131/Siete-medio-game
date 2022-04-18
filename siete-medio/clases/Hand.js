@@ -8,9 +8,6 @@ export default class Hand {
         this.points = 0;
     }
 
-/*     static get cardMaximum(){
-        return 15;//máximo puede sacar 1/2
-    } */
 
     //Métodos
     hands(){

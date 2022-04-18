@@ -1,3 +1,11 @@
+body {
+	color: white;
+	margin: 1em 3em;
+	font-size: 18px;
+	font-family: "Open Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+		"Helvetica Neue", sans-serif;
+}
+
 .table{
   display:flex;
   flex-wrap: wrap;
@@ -5,6 +13,7 @@
 
 .table__item{
   width: 50%;
+  height: 800px;
   text-align: center;
 }
 
@@ -13,8 +22,176 @@
   text-align: center;
 }
 
-#imgPlayer1 > img ,
-#imgPlayer2 > img{
+img{
   width: 150px;
   height: auto;
+}
+
+.wallpaper > img{
+  width: 100%;
+  height: 300%;
+}
+
+.wallpaper{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.game{
+  z-index: 10;
+}
+
+/*FIRST CARD HIDDEN*/
+
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  perspective: 1000px;
+}
+
+.flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card__inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card__inner--front, .flip-card__inner--back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card__inner--front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card__inner--back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.headerGame{
+  display:flex;
+}
+
+.headerGame > span:first-child{
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
+}
+
+
+.headerGame > span:last-child{
+  text-align: center;
+  flex-grow: 2;
+}
+
+
+/*BUTTON DISABLE STYLE*/
+.pointer-events-none {
+  pointer-events: none;
+  background-image: linear-gradient(1deg, #cad8df, #808a90 99%);
+}
+
+.wrapper{
+  cursor: not-allowed;
+}
+
+
+/* BUTTON STYLE*/
+button {
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+button:active,
+Button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-position: -20px -20px;
+}
+
+button:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+/*RESET GAME*/
+#resetGame{
+  visibility: hidden;
+  background-color: red;
+  background-image: linear-gradient(1deg, #fd724f, #f32e14 99%);
+}
+
+/*footer*/
+.footer a {
+	text-decoration: none;
+}
+
+.footer a:link {
+	color: white;
+}
+
+.footer a:visited {
+	color: green;
+}
+
+.footer a:visited {
+	color: lightblue;
+}
+
+
+/*VIDEO*/
+
+#headerPopup{
+  width:75%;
+  margin:0 auto;
+}
+
+#headerPopup iframe{
+  width:100%;
+  margin:0 auto;
 }
