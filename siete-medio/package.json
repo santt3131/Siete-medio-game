@@ -1,7 +1,8 @@
 {
   "name": "siete-medio",
-  "private": true,
   "version": "1.0.0",
+  "main":"dist",
+  "description": "Es un paquete de ayuda para la creación del juego español siete y medio",
   "type": "module",
   "scripts": {
     "dev": "vite",
