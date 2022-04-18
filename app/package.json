@@ -12,6 +12,6 @@
     "vite": "^2.9.2"
   },
   "dependencies": {
-    "siete-medio": "file:../siete-medio"
+    "siete-medio": "^1.0.0"
   }
 }
