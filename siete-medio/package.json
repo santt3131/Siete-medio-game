@@ -1,8 +1,14 @@
 {
   "name": "siete-medio",
-  "version": "1.0.0",
-  "main":"dist",
+  "version": "1.0.1",
+  "main": "dist",
   "description": "Es un paquete de ayuda para la creación del juego español siete y medio",
+  "keywords": [
+    "Siete y medio",
+    "Siete medio"
+  ],
+  "license": "MIT",
+  "author": "Santiago Bruno <santt31@gmail.com> (https://www.linkedin.com/in/santiagobrunop/)",
   "type": "module",
   "scripts": {
     "dev": "vite",
